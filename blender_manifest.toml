@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "extrude_edge_to_triangle"
+version = "1.0.0"
+name = "Extrude Edge to Triangle"
+tagline = "Creates a triangle from selected edge(s) by placing a new vertex at the midpoint"
+maintainer = "SirAster"
+type = "add-on"
+tags = ["Mesh"]
+blender_version_min = "4.2.0"
+license = ["SPDX:GPL-3.0-or-later"]
