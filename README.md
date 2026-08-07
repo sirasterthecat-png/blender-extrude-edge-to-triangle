@@ -2,55 +2,45 @@
 A tool for classic game developers to be able to generate triangles instead of quads for extruding.
 It's a tool I specifically made because I'm trying to model n64 models and the older Blender version I need to use for fast64 and tiny3d doesn't offer anything like that.
 
-# Extrude Edge to Triangle
+# N64 Triangle Extrude Tools
 
-It takes one or more selected edges and creates a new triangle for each by placing a vertex at the **midpoint** of the edge. You can then immediately pull the new vertex(s) with `G` in any direction you want.
+Two pure-triangle extrude tools designed for N64-style low-poly modeling in Blender.
 
-## Features
+## Tools
 
-- Works on **multiple edges** at once
-- Places the new vertex exactly in the middle of each edge
-- Automatically selects the new vertices so you can move them right away
-- Comes with two hotkeys ready to use
+### 1. Extrude Edge to Triangle
+Creates a triangle from each selected edge by placing a new vertex at the midpoint.
+
+**Default hotkey:** Front thumb button (BUTTON5MOUSE)
+
+### 2. Extrude Edge Loop to Triangles
+Extrudes a closed edge loop into a pure-triangle polygonal ring.  
+Creates mid-point vertices, side triangles, and perimeter triangles that connect back to the original edge vertices.
+
+**Default hotkey:** Shift + Front thumb button
+
+> You can rebind either tool to any key or mouse button you prefer in  
+> **Edit → Preferences → Keymap** (search for “Extrude Edge”).
 
 ## Installation
 
-### Method 1: As a script (quick)
-1. Open Blender
-2. Go to the **Scripting** workspace
-3. Open the `extrude_edge_to_triangle.py` file (or paste the code)
-4. Click **Run Script**
+1. Download the latest release zip **or** clone this repository.
+2. In Blender go to `Edit → Preferences → Add-ons → Install...`
+3. Select the zip (or the folder containing `__init__.py` + `blender_manifest.toml`).
+4. Enable **N64 Triangle Extrude Tools**.
 
-### Method 2: As an addon (recommended)
-1. In Blender go to `Edit → Preferences → Add-ons`
-2. Click **Install...**
-3. Select the `extrude_edge_to_triangle.py` file
-4. Enable the addon (check the box)
+## Usage
 
-## How to use
+1. Enter **Edit Mode**.
+2. Select edges (or a clean closed edge loop).
+3. Use the hotkeys above (or your own custom bindings).
 
-1. Go into **Edit Mode**
-2. Switch to **Edge Select** mode (`2`)
-3. Select one or more edges
-4. Trigger the tool with either:
-   - **Shift + E**
-   - The top thumb button on a Logitech mouse (`BUTTON5MOUSE`)
-5. The new vertices will be selected — press `G` and move them wherever you want
+## Notes
 
-## Hotkeys
+- Designed for pure-triangle workflows (no quads).
+- Works best with clean closed loops for the second tool.
+- Compatible with Blender 3.0+ and the Blender 4.2+ Extensions system.
 
-| Input              | Action                        |
-|--------------------|-------------------------------|
-| `Shift + E`        | Extrude Edge to Triangle      |
-| Mouse Button 5     | Extrude Edge to Triangle      |
+## Author
 
-You can change the hotkeys in Blender’s Keymap preferences if you want.
-
-## Why this tool?
-
-When working in a strict triangle-only workflow (especially for N64-style models), constantly extruding quads and then collapsing them is tedious. This tool lets you quickly grow new triangles from existing edges while staying in pure triangles.
-
-## Credits
-SirAsterTheCat
-
-Created for a pure-triangle N64 modeling workflow.
+SirAster
