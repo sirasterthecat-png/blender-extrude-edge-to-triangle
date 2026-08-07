@@ -1,0 +1,10 @@
+schema_version = "1.0.0"
+id = "n64_triangle_extrude_tools"
+version = "1.1.1"
+name = "N64 Triangle Extrude Tools"
+tagline = "Pure-triangle extrude tools for N64-style modeling"
+maintainer = "SirAster"
+type = "add-on"
+tags = ["Mesh", "Modeling"]
+blender_version_min = "4.2.0"
+license = ["SPDX:GPL-3.0-or-later"]
